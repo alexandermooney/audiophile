@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <title>audiophile</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="product-view.css">
+
+</head>
+
+<body id="zx9">
+  <header class="[ flex-flow row m-align-center ][ clr-neutral-100 bg-neutral-900 ]">
+
+    <div
+      class="[ container flex-flow m-flex-row m-justify-between t-justify-start d-justify-between m-align-center m-xp-24 t-xp-40 ]">
+
+      <div class="hamburger">
+        <img class="svg-hover" src="assets/shared/tablet/icon-hamburger.svg" alt="Navigation dropdown icon">
+      </div>
+
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/shared/desktop/logo.svg" alt="audiophile logo"> </a>
+      </div>
+
+      <nav class="[ nav-1 ]">
+        <ul class="[ flex-flow d-flex-row d-justify-center d-align-center d-gap-32 ]">
+          <li><a class="subtitle link" href="index.html">Home</a></li>
+          <li><a class="subtitle link" href="headphones.html">Headphones</a></li>
+          <li><a class="subtitle link" href="speakers.html">Speakers</a></li>
+          <li><a class="subtitle link" href="earphones.html">Earphones</a></li>
+        </ul>
+      </nav>
+
+      <div class="cart">
+        <img class="svg-hover" src="assets/shared/desktop/icon-cart.svg" alt="Shopping cart icon">
+      </div>
+
+    </div>
+  </header>
+
+
+  <nav class="navbar nav-2 m-xp-24 t-xp-40">
+
+    <div class="[ nav-container ][ flex-flow m-flex-col t-flex-row t-gap-10 d-gap-32 container ]">
+
+      <div
+        class="[ card card-link headphones ][ flex-flow m-flex-col m-justify-end m-align-center m-p-8 ][ bg-neutral-400 ]">
+        <p class="[ nav-link ][ uppercase fw-800 ]">Headphones</p>
+        <a class="btn btn-arrow" href="headphones.html">Shop</a>
+      </div>
+
+      <div
+        class="[ card card-link speakers ][ flex-flow m-flex-col m-justify-end m-align-center m-p-8 ][ bg-neutral-400 ]">
+        <p class="[ nav-link ][ uppercase fw-800 ]">Speakers</p>
+        <a class="btn btn-arrow" href="speakers.html">Shop</a>
+      </div>
+
+      <div
+        class="[ card card-link earphones ][ flex-flow m-flex-col m-justify-end m-align-center m-p-8 ][ bg-neutral-400 ]">
+        <p class="[ uppercase fw-800 ]">Earphones</p>
+        <a class="btn btn-arrow" href="earphones.html">Shop</a>
+      </div>
+
+    </div>
+
+  </nav>
+  <div class="overlay"></div>
+
+  <div class="[ cart-container ][ flex-flow m-flex-col m-gap-32 m-p-32 ]">
+    <div class="[ cart-head ][ flex-flow m-flex-row m-justify-between m-align-center ]">
+      <h4 class="m-18 clr-neutral-900">Cart (<span class="cart-count">0</span>)</h4>
+      <button class="[ remove-button ]">Remove all</button>
+    </div>
+
+    <div class="[ cart-items ][ flex-flow m-flex-col m-gap-24 ]"></div>
+
+    <div class="[ cart-total ][ flex-flow m-flex-row m-justify-between m-align-center ]">
+      <span class="clr-trans-black uppercase">Total</span>
+      <span class="[ fw-800 m-18 ]">$ <span class="total-price">0</span></span>
+    </div>
+
+    <a class="btn btn-primary m-center" href="checkout.html">Checkout</a>
+  </div>
+
+  <!-- Begin Content -->
+
+  <div class="container m-xp-24 t-xp-40">
+    <a class="[ back-link ][ clr-trans-black fw-100 ]" href="speakers.html">Go Back</a>
+  </div>
+
+  <section
+    class="[ product-info ][ container flex-flow m-flex-col m-justify-center m-gap-24 xd-gap-56 m-xp-24 t-xp-40 ]">
+    <div class="[ product-hero ][ flex-flow m-flex-col d-flex-row d-align-center m-gap-32 ]">
+      <div class="card zx9 bg-neutral-400"></div>
+      <div class="[ description ][ flex-flow m-flex-col m-gap-24 d-gap-32 ]">
+        <p class="overline clr-primary-700">New product</p>
+        <h1 class="m-28 d-40">ZX9<br> Speaker</h1>
+        <p class="clr-trans-black">Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf
+          speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and
+          practical audio setups.</p>
+        <p class="m-18 fw-800">$ 4,500</p>
+        <div class="[ add-to-cart ][ flex-flow  m-gap-16 ]">
+          <div class="[ qty ][ flex-flow m-flex-row m-justify-center m-align-center m-center ][ bg-neutral-400 m-13 ]">
+            <div class="[ qty-minus ]">-</div>
+            <div class="[ qty-num ][ fw-800 ]">1</div>
+            <div class="[ qty-plus ]">+</div>
+          </div>
+          <button class="btn btn-primary">Add to cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="[ features-container ][ flex-flow m-flex-col xd-flex-row ]">
+      <div class="[ features ][ flex-flow m-flex-col m-gap-24 d-gap-32 ]">
+        <h2 class="m-24 t-32">Features</h2>
+        <p class="clr-trans-black">Connect via Bluetooth or nearly any wired source. This speaker features optical,
+          digital coaxial, USB Type-B, stereo RCA, and stereo XLR inputs, allowing you to have up to five wired source
+          devices connected for easy switching. Improved bluetooth technology offers near lossless audio quality at up
+          to 328ft (100m).<br><br>
+
+          Discover clear, more natural sounding highs than the competition with ZX9’s signature planar diaphragm
+          tweeter. Equally important is its powerful room-shaking bass courtesy of a 6.5” aluminum alloy bass unit.
+          You’ll be able to enjoy equal sound quality whether in a large room or small den. Furthermore, you will
+          experience new sensations from old songs since it can respond to even the subtle waveforms.</p>
+      </div>
+      <div class="[ in-the-box ][ flex-flow m-flex-col t-flex-row xd-flex-col m-gap-24 xd-gap-32 ]">
+        <h3 class="m-24 t-32">In the Box</h3>
+        <div class="[ box-contents ][ flex-flow m-flex-col m-gap-8 ]">
+          <div class="flex-flow m-flex-row m-gap-24">
+            <span class="clr-primary-700 fw-800">2x</span>
+            <span class="clr-trans-black">Speaker Unit</span>
+          </div>
+          <div class="flex-flow m-flex-row m-gap-24">
+            <span class="clr-primary-700 fw-800">2x</span>
+            <span class="clr-trans-black">Speaker Cloth Panel</span>
+          </div>
+          <div class="flex-flow m-flex-row m-gap-24">
+            <span class="clr-primary-700 fw-800">1x</span>
+            <span class="clr-trans-black">User Manual</span>
+          </div>
+          <div class="flex-flow m-flex-row m-gap-24">
+            <span class="clr-primary-700 fw-800">1x</span>
+            <span class="clr-trans-black">3.5mm 10m Audio Cable</span>
+          </div>
+          <div class="flex-flow m-flex-row m-gap-24">
+            <span class="clr-primary-700 fw-800">1x</span>
+            <span class="clr-trans-black">10m Optical Cable</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-gallery zx9">
+      <div class="card gal-1"></div>
+      <div class="card gal-2"></div>
+      <div class="card gal-3"></div>
+    </div>
+  </section>
+
+  <section class="[ related-items ][ container flex-flow m-flex-col m-gap-40 m-xp-24 t-xp-40 ][ m-center ]">
+
+    <h4 class="m-24 t-32">You may also like</h4>
+
+    <div
+      class="[ related-content ][ flex-flow m-flex-col m-justify-center d-align-center d-flex-row m-gap-56 d-gap-30 ]">
+
+      <div class="[ related-item ][ flex-flow m-flex-col m-align-center m-gap-32 ]">
+        <div class="[ card zx7 ][ bg-neutral-400 ]"></div>
+        <h5 class="m-24">ZX7 Speaker</h5>
+        <a class="btn btn-primary" href="product-zx7-speaker.html">See product</a>
+      </div>
+
+      <div class="[ related-item ][ flex-flow m-flex-col m-align-center m-gap-32 ]">
+        <div class="[ card xx99mi ][ bg-neutral-400 ]"></div>
+        <h5 class="m-24">XX99 Mark I</h5>
+        <a class="btn btn-primary" href="product-xx99-mark-one-headphones.html">See product</a>
+      </div>
+
+      <div class="[ related-item ][ flex-flow m-flex-col m-align-center m-gap-32 ]">
+        <div class="[ card xx59 ][ bg-neutral-400 ]"></div>
+        <h5 class="m-24">XX59</h5>
+        <a class="btn btn-primary" href="product-xx59-headphones.html">See product</a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- End Content -->
+
+  <section class="[ nav-cards ][ flex-flow m-flex-col t-flex-row t-gap-10 d-gap-30 container m-xp-24 t-xp-40 ]">
+
+    <div
+      class="[ card card-link headphones ][ flex-flow m-flex-col m-justify-end m-align-center m-p-8 ][ bg-neutral-400 ]">
+      <p class="[ uppercase fw-800 ]">Headphones</p>
+      <a class="btn btn-arrow" href="headphones.html">Shop</a>
+    </div>
+
+    <div
+      class="[ card card-link speakers ][ flex-flow m-flex-col m-justify-end m-align-center m-p-8 ][ bg-neutral-400 ]">
+      <p class="[ uppercase fw-800 ]">Speakers</p>
+      <a class="btn btn-arrow" href="speakers.html">Shop</a>
+    </div>
+
+    <div
+      class="[ card card-link earphones ][ flex-flow m-flex-col m-justify-end m-align-center m-p-8 ][ bg-neutral-400 ]">
+      <p class="[ uppercase fw-800 ]">Earphones</p>
+      <a class="btn btn-arrow" href="earphones.html">Shop</a>
+    </div>
+
+  </section>
+
+  <section class="[ info ][ container flex-flow m-flex-col m-gap-32 m-center m-xp-24 t-xp-40 ]">
+
+    <div class="card"></div>
+
+    <div class="[ card-content ][ flex-flow m-flex-col m-justify-center m-gap-32 ]">
+      <h4 class="t-40">Bringing you the <span class="clr-primary-700">best</span> audio gear</h4>
+      <p>Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones,
+        speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available for you to
+        browse and experience a wide range of our products. Stop by our store to meet some of the fantastic people who
+        make Audiophile the best place to buy your portable audio equipment.</p>
+    </div>
+
+  </section>
+
+  <footer class="[ bg-neutral-900 ]">
+
+    <div
+      class="[ footer-content ][ container flex-flow m-flex-col m-justify-center m-align-center t-align-start m-gap-48 t-gap-32 m-xp-24 t-xp-40 m-center t-left ]">
+
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/shared/desktop/logo.svg" alt="audiophile logo">
+        </a>
+      </div>
+
+      <ul class="[ footer-links ][ flex-flow m-flex-col t-flex-row m-gap-16 t-gap-32 ]">
+        <li>
+          <a class="[ link ][ uppercase ]" href="index.html">Home</a>
+        </li>
+        <li>
+          <a class="[ link ][ uppercase ]" href="headphones.html">Headphones</a>
+        </li>
+        <li>
+          <a class="[ link ][ uppercase ]" href="speakers.html">Speakers</a>
+        </li>
+        <li>
+          <a class="[ link ][ uppercase ]" href="earphones.html">Earphones</a>
+        </li>
+      </ul>
+
+      <p class="[ footer-info ][ clr-trans-white ]">Audiophile is an all in one stop to fulfill your audio needs. We're
+        a
+        small team of
+        music lovers and sound
+        specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility
+        - we're open 7 days a week.</p>
+
+      <p class="[ copyright ][ clr-trans-white fw-800 ]">Copyright 2022. All Rights Reserved</p>
+
+      <ul class="[ social-links ][ flex-flow m-flex-row m-gap-16 ]">
+        <li>
+          <a href="https://facebook.com">
+            <img class="svg-hover" src="assets/shared/desktop/icon-facebook.svg" alt="Facebook logo">
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com">
+            <img class="svg-hover" src="assets/shared/desktop/icon-twitter.svg" alt="Twitter logo">
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com">
+            <img class="svg-hover" src="assets/shared/desktop/icon-instagram.svg" alt="Instagram logo">
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="product-page.js"></script>
+</body>
+
+</html>

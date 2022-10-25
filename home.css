@@ -1,0 +1,221 @@
+/* General */
+.filter-hover:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Hero */
+.hero,
+.hero-content {
+  min-height: 37.5rem;
+}
+
+.hero {
+  background-color: rgb(23, 23, 23);
+  margin-bottom: 1.5rem;
+}
+
+.hero-content {
+  width: 100%;
+  padding-top: 5.625rem;
+  position: relative;
+}
+
+.hero-content>* {
+  position: relative;
+}
+
+.hero-content::before {
+  content: "";
+  background-image: url('assets/home/mobile/image-header.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.hero-content .overline {
+  margin-bottom: -0.5rem;
+}
+
+.hero-text {
+  opacity: 0.75;
+}
+
+/* Products / Product Cards */
+
+.card-tall {
+  min-height: 37.5rem;
+}
+
+.products .card-tall {
+  background-image: url('assets/home/desktop/pattern-circles.svg');
+  background-size: 38rem 38rem;
+  background-position: 50% -8rem;
+  background-repeat: no-repeat;
+}
+
+.speaker {
+  width: 10.75rem;
+  height: 12.9375rem;
+  background-image: url('assets/home/mobile/image-speaker-zx9.png');
+  background-size: cover;
+  margin-bottom: 0.5rem;
+}
+
+.card-med {
+  min-height: 20rem;
+}
+
+.products .card-med {
+  background-image: url('assets/home/mobile/image-speaker-zx7.jpg');
+}
+
+.card-sm {
+  min-height: 12.5rem;
+}
+
+.products .earphones {
+  background-image: url('assets/home/mobile/image-earphones-yx1.jpg');
+}
+
+@media screen and (min-width: 481px) {
+
+  /* Hero */
+  .hero,
+  .hero-content {
+    min-height: 45.625rem;
+  }
+
+  .hero {
+    margin-bottom: 5rem;
+  }
+
+  .hero-content::before {
+    content: "";
+    background-image: url('assets/home/tablet/image-header.jpg');
+  }
+
+  .hero-content>* {
+    max-width: 23.75rem;
+  }
+
+  .hero-content .overline {
+    margin: 0;
+  }
+
+  /* Products / Products Cards */
+  .card-tall {
+    min-height: 45rem;
+  }
+
+  .products .card-tall {
+    background-size: 59rem 59rem;
+    background-position: 50% -18rem;
+  }
+
+  .products .card-tall p {
+    width: 50%;
+  }
+
+  .speaker {
+    width: 12.3125rem;
+    height: 14.8125rem;
+    background-image: url('assets/home/tablet/image-speaker-zx9.png');
+    margin-bottom: 4rem;
+  }
+
+  .products .card-med {
+    background-image: url('assets/home/tablet/image-speaker-zx7.jpg');
+  }
+
+  .products .card-med,
+  .products .card-sm {
+    padding-left: 3.875rem;
+  }
+
+  .card-sm {
+    min-height: 20rem;
+  }
+
+  .products .earphones {
+    background-image: url('assets/home/tablet/image-earphones-yx1.jpg');
+  }
+}
+
+@media screen and (min-width: 769px) {
+
+  /* Hero */
+  .hero {
+    background-color: rgb(25, 25, 25);
+    margin-bottom: 8.25rem;
+  }
+
+  .hero-content::before {
+    content: "";
+    background-image: url('assets/home/desktop/image-hero.jpg');
+    background-position-x: 67%;
+  }
+
+  /* Products / Products Cards */
+  .products .card-med {
+    background-image: url('assets/home/desktop/image-speaker-zx7.jpg');
+  }
+
+  .products .card-med,
+  .products .card-sm {
+    padding-left: 5.9375rem;
+  }
+
+  .products .earphones {
+    background-image: url('assets/home/desktop/image-earphones-yx1.jpg');
+  }
+}
+
+@media screen and (min-width: 1110px) {
+
+  /* Hero */
+  .hero-content::before {
+    background-position: center;
+  }
+
+  /* Products / Products Cards */
+  .card-tall {
+    min-height: 35rem;
+  }
+
+  .products .card-tall {
+    padding-right: 5.9375rem;
+    background-size: 60rem 60rem;
+    background-position: -10rem -5rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .products .card-tall .card-content {
+    align-items: flex-start;
+    text-align: start;
+    position: absolute;
+    right: -15rem;
+  }
+
+  .speaker {
+    width: 24rem;
+    height: 28.8585rem;
+    background-image: url('assets/home/desktop/image-speaker-zx9.png');
+    margin-bottom: 4rem;
+    position: absolute;
+    left: 8rem;
+    bottom: -5rem;
+  }
+}

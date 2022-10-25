@@ -1,0 +1,1282 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+:root {
+  --clr-neutral-100: #FFFFFF;
+  --clr-neutral-200: #FAFAFA;
+  --clr-neutral-400: #F1F1F1;
+  --clr-neutral-600: #4C4C4C;
+  --clr-neutral-800: #101010;
+  --clr-neutral-900: #000000;
+  --clr-primary-700: #D87D4A;
+  --clr-primary-400: #FBAF85;
+
+  --fw-100: 400;
+  --fw-400: 500;
+  --fw-800: 700;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/********** COMPOSITION ************/
+
+/* General */
+.container {
+  max-width: 69.375rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Gap */
+.m-gap-8 {
+  gap: 0.5rem;
+}
+
+.m-gap-16 {
+  gap: 1rem;
+}
+
+.m-gap-24 {
+  gap: 1.5rem;
+}
+
+.m-gap-32 {
+  gap: 2rem;
+}
+
+.m-gap-48 {
+  gap: 3rem;
+}
+
+.m-gap-56 {
+  gap: 3.5rem;
+}
+
+/* Flex */
+.flex-flow {
+  display: flex;
+}
+
+.row>* {
+  width: 100%;
+}
+
+.m-flex-row {
+  flex-direction: row;
+}
+
+.m-flex-col {
+  flex-direction: column;
+}
+
+.m-justify-start {
+  justify-content: flex-start;
+}
+
+.m-justify-center {
+  justify-content: center;
+}
+
+.m-justify-end {
+  justify-content: flex-end;
+}
+
+.m-justify-between {
+  justify-content: space-between;
+}
+
+.m-align-start {
+  align-items: flex-start;
+}
+
+.m-align-center {
+  align-items: center;
+}
+
+/* Grid */
+.grid-flow {
+  display: grid;
+}
+
+/* Padding */
+.m-p-8 {
+  padding: 0.5rem;
+}
+
+.m-p-16 {
+  padding: 1rem;
+}
+
+.m-p-24 {
+  padding: 1.5rem;
+}
+
+.m-p-32 {
+  padding: 2rem;
+}
+
+.m-p-40 {
+  padding: 2.5rem;
+}
+
+.m-xp-24 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.m-xp-40 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+/* Margin */
+.m-mt-16 {
+  margin-top: 1rem;
+}
+
+/********** UTILITY ****************/
+
+/* Font */
+.m-center {
+  text-align: center;
+}
+
+.m-left {
+  text-align: left;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Font Sizes */
+h1,
+.m-56 {
+  font-size: 3.5rem;
+  line-height: 3.625rem;
+  letter-spacing: 0.125rem;
+}
+
+h2,
+.m-40 {
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+  letter-spacing: 0.09375rem;
+}
+
+.m-36 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.08125rem;
+}
+
+h3,
+.m-32 {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.071875rem;
+}
+
+h4,
+.m-28 {
+  font-size: 1.75rem;
+  line-height: 2.375rem;
+  letter-spacing: 0.125rem;
+}
+
+h5,
+.m-24 {
+  font-size: 1.5rem;
+  line-height: 2.0625rem;
+  letter-spacing: 0.10625rem;
+}
+
+h6,
+.m-18 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.08125rem;
+}
+
+.m-15 {
+  font-size: 0.9375rem;
+  line-height: 1.28125rem;
+  letter-spacing: 0.6875rem;
+}
+
+.overline {
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+  letter-spacing: 0.625rem;
+}
+
+.subtitle,
+.m-13 {
+  font-size: 0.8125rem;
+  line-height: 1.5625rem;
+  letter-spacing: 0.0625rem;
+}
+
+.subtitle {
+  font-weight: var(--fw-800);
+}
+
+/* Font Colors */
+.clr-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+
+.clr-neutral-200 {
+  color: var(--clr-neutral-200);
+}
+
+.clr-neutral-400 {
+  color: var(--clr-neutral-400);
+}
+
+.clr-neutral-600 {
+  color: var(--clr-neutral-600);
+}
+
+.clr-neutral-800 {
+  color: var(--clr-neutral-800);
+}
+
+.clr-neutral-900 {
+  color: var(--clr-neutral-900);
+}
+
+.clr-primary-400 {
+  color: var(--clr-primary-400);
+}
+
+.clr-primary-700 {
+  color: var(--clr-primary-700);
+}
+
+.clr-trans-white {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.clr-trans-black {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Font Weights */
+.fw-100 {
+  font-weight: var(--fw-100);
+}
+
+.fw-400 {
+  font-weight: var(--fw-400);
+}
+
+.fw-800 {
+  font-weight: var(--fw-800);
+}
+
+/* Background Colors */
+.bg-neutral-100 {
+  background-color: var(--clr-neutral-100);
+}
+
+.bg-neutral-200 {
+  background-color: var(--clr-neutral-200);
+}
+
+.bg-neutral-400 {
+  background-color: var(--clr-neutral-400);
+}
+
+.bg-neutral-600 {
+  background-color: var(--clr-neutral-600);
+}
+
+.bg-neutral-800 {
+  background-color: var(--clr-neutral-800);
+}
+
+.bg-neutral-900 {
+  background-color: var(--clr-neutral-900);
+}
+
+.bg-primary-400 {
+  background-color: var(--clr-primary-400);
+}
+
+.bg-primary-700 {
+  background-color: var(--clr-primary-700);
+}
+
+/* Animations */
+
+/********** BLOCK ******************/
+
+/* General */
+body {
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  font-family: 'Manrope', sans-serif;
+  color: var(--clr-neutral-900);
+  min-height: 100vh;
+  height: fit-content;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.overline,
+.subtitle,
+.btn {
+  text-transform: uppercase;
+}
+
+a,
+.link {
+  color: var(--clr-neutral-100);
+  text-decoration: none;
+  font-weight: var(--fw-800);
+}
+
+.btn,
+.remove-button,
+.link,
+.svg-hover,
+.qty-minus,
+.qty-plus,
+.cart-container {
+  cursor: pointer;
+  transition: 200ms all ease-in-out;
+}
+
+.btn,
+.remove-button,
+.link,
+.svg-hover,
+.qty-minus,
+.qty-plus {
+  cursor: pointer;
+}
+
+.svg-hover:hover {
+  filter: invert(48%) sepia(84%) saturate(364%) hue-rotate(337deg) brightness(98%) contrast(88%);
+}
+
+a:hover,
+link:hover {
+  color: var(--clr-primary-700);
+}
+
+footer .link {
+  font-size: 0.8125rem;
+  line-height: 1.5625rem;
+  letter-spacing: 0.125rem;
+}
+
+section {
+  margin-bottom: 7.5rem;
+}
+
+/* Header */
+header {
+  width: 100%;
+  background-color: rgb(25, 25, 25);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 300;
+}
+
+header .container {
+  min-height: 5.625rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header ul,
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2.25rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: var(--clr-neutral-100);
+  position: absolute;
+  top: 5.625rem;
+  left: auto;
+  right: auto;
+  z-index: 200;
+}
+
+.nav-1 {
+  display: none;
+}
+
+.nav-2,
+.overlay {
+  transform: translateY(-100rem);
+}
+
+.nav-2 {
+  transition: all 200ms ease-in-out;
+}
+
+.overlay {
+  transition: background-color 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.nav-container {
+  width: 100%;
+}
+
+.navbar .home {
+  display: none;
+}
+
+.nav-link,
+.nav-link:hover {
+  color: var(--clr-neutral-900);
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+/* Buttons */
+
+.btn {
+  padding: 0.9375rem 1.875rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.0625rem;
+  font-weight: var(--fw-800);
+  text-transform: uppercase;
+}
+
+.btn,
+.remove-button {
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.btn-primary {
+  background-color: var(--clr-primary-700);
+  border-color: var(--clr-primary-700);
+  color: var(--clr-neutral-100);
+}
+
+.btn-primary:hover {
+  background-color: var(--clr-primary-400);
+  border-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--clr-neutral-900);
+  color: var(--clr-neutral-900);
+}
+
+.btn-outline:hover,
+.btn-black {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}
+
+.btn-black:hover {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-600);
+}
+
+.btn-arrow {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-arrow::after {
+  content: url('assets/shared/desktop/icon-arrow-right.svg');
+  margin-left: 0.8125rem;
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
+.btn-arrow:hover {
+  color: var(--clr-primary-700);
+}
+
+.remove-button {
+  padding: 0;
+  opacity: 0.5;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.5);
+}
+
+.remove-button:hover {
+  opacity: 1;
+}
+
+/* Cards */
+.card {
+  width: 100%;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.card-link {
+  min-height: 10.3125rem;
+  position: relative;
+  margin-top: 4.25rem;
+}
+
+.card-link a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card-link.headphones::before,
+.card-link.speakers::before,
+.card-link.earphones::before {
+  width: 7rem;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+}
+
+.card-link.headphones::before {
+  content: "";
+  background-image: url('assets/shared/desktop/image-category-thumbnail-headphones.png');
+  min-height: 9.1rem;
+  top: -3.5rem;
+}
+
+.card-link.speakers::before {
+  content: "";
+  background-image: url('assets/shared/desktop/image-category-thumbnail-speakers.png');
+  min-height: 8.4167rem;
+  top: -3.25rem;
+}
+
+.card-link.earphones::before {
+  content: "";
+  background-image: url('assets/shared/desktop/image-category-thumbnail-earphones.png');
+  width: 10rem;
+  min-height: 10rem;
+  top: -3.25rem;
+}
+
+
+
+/* Info / Info Cards */
+.info .card {
+  height: 18.75rem;
+  background-image: url('assets/shared/mobile/image-best-gear.jpg');
+}
+
+.products .card-med,
+.products .card-sm,
+.info .card {
+  background-size: cover;
+}
+
+/* Footer */
+
+footer {
+  padding-top: 3.25rem;
+  padding-bottom: 2rem;
+}
+
+.footer-content {
+  position: relative;
+}
+
+.footer-content::before {
+  content: "";
+  width: 6.3125rem;
+  height: 0.25rem;
+  background-color: var(--clr-primary-700);
+  position: absolute;
+  top: -3.25rem;
+}
+
+/* Cart */
+.cart-container {
+  display: none;
+  width: min(23.5625rem, auto);
+  height: auto;
+  border-radius: 0.5rem;
+  background-color: var(--clr-neutral-100);
+  position: absolute;
+  top: 7.125rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  z-index: 200;
+  transform: translateX(30rem);
+  opacity: 0;
+}
+
+.cart-item-name,
+.cart-item-price {
+  font-weight: var(--fw-800);
+}
+
+.cart-item-price {
+  font-size: 0.875rem;
+  opacity: 0.5;
+}
+
+.qty {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--clr-neutral-400);
+  font-size: 0.8125rem;
+  line-height: 1.5625rem;
+  letter-spacing: 0.0625rem;
+}
+
+.qty>* {
+  width: 2.5rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-container,
+.qty>* {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.qty-cart>* {
+  width: 2rem;
+  height: 2rem;
+}
+
+.qty-minus,
+.qty-plus {
+  opacity: 0.25;
+}
+
+.qty-minus:hover,
+.qty-plus:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.qty-num {
+  font-weight: var(--fw-800);
+}
+
+.item-info .card {
+  height: 4rem;
+  width: 4rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.cart-item.xx99mii .card {
+  background-image: url('assets/cart/image-xx99-mark-two-headphones.jpg');
+}
+
+.cart-item.xx99mi .card {
+  background-image: url('assets/cart/image-xx99-mark-one-headphones.jpg');
+}
+
+.cart-item.xx59 .card {
+  background-image: url('assets/cart/image-xx59-headphones.jpg');
+}
+
+.cart-item.zx9 .card {
+  background-image: url('assets/cart/image-zx9-speaker.jpg');
+}
+
+.cart-item.zx7 .card {
+  background-image: url('assets/cart/image-zx7-speaker.jpg');
+}
+
+.cart-item.yx1 .card {
+  background-image: url('assets/cart/image-yx1-earphones.jpg');
+}
+
+
+/********** EXCEPTION **************/
+
+
+
+/********** MEDIA QUERIES **********/
+
+@media screen and (min-width: 481px) {
+
+  /********** COMPOSITION ************/
+
+  /* Gap */
+  .t-gap-10 {
+    gap: 0.625rem;
+  }
+
+  .t-gap-16 {
+    gap: 1rem;
+  }
+
+  .t-gap-24 {
+    gap: 1.5rem;
+  }
+
+  .t-gap-30 {
+    gap: 1.875rem;
+  }
+
+  .t-gap-32 {
+    gap: 2rem;
+  }
+
+  .t-gap-48 {
+    gap: 3rem;
+  }
+
+  /* Flex */
+  .t-flex-row {
+    flex-direction: row;
+  }
+
+  .t-flex-col {
+    flex-direction: column;
+  }
+
+  .t-justify-start {
+    justify-content: flex-start;
+  }
+
+  .t-justify-center {
+    justify-content: center;
+  }
+
+  .t-justify-end {
+    justify-content: flex-end;
+  }
+
+  .t-justify-between {
+    justify-content: space-between;
+  }
+
+  .t-align-start {
+    align-items: flex-start;
+  }
+
+  .t-align-center {
+    align-items: center;
+  }
+
+  /* Padding */
+  .t-p-8 {
+    padding: 0.5rem;
+  }
+
+  .t-p-24 {
+    padding: 1.5rem;
+  }
+
+  .t-p-40 {
+    padding: 2.5rem;
+  }
+
+  .t-xp-24 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .t-xp-40 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  /* Margin */
+  .t-mt-16 {
+    margin-top: 1rem;
+  }
+
+  /********** UTILITY ****************/
+
+  /* Font */
+  .t-center {
+    text-align: center;
+  }
+
+  .t-left {
+    text-align: left;
+  }
+
+  /* Font Sizes */
+  .t-56 {
+    font-size: 3.5rem;
+    line-height: 3.625rem;
+    letter-spacing: 0.125rem;
+  }
+
+  .t-40 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    letter-spacing: 0.09375rem;
+  }
+
+  .t-36 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.08125rem;
+  }
+
+  .t-32 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+    letter-spacing: 0.071875rem;
+  }
+
+  .t-28 {
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+    letter-spacing: 0.125rem;
+  }
+
+  .t-24 {
+    font-size: 1.5rem;
+    line-height: 2.0625rem;
+    letter-spacing: 0.10625rem;
+  }
+
+  .t-18 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.08125rem;
+  }
+
+  .t-15 {
+    font-size: 0.9375rem;
+    line-height: 1.28125rem;
+    letter-spacing: 0.6875rem;
+  }
+
+  .t-xp-40 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  /********** BLOCK ******************/
+
+  /* General */
+  section {
+    margin-bottom: 6rem;
+  }
+
+  /* Header */
+  header .logo {
+    margin-left: 2.625rem;
+  }
+
+  header .cart {
+    margin-left: auto;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding-top: 3.5rem;
+    padding-bottom: 4.1875rem;
+  }
+
+  /* Info / Info Cards */
+  .info .card {
+    background-image: url('assets/shared/tablet/image-best-gear.jpg');
+    margin-bottom: 2rem;
+  }
+
+  /* Footer */
+  footer {
+    padding-top: 3.75rem;
+    padding-bottom: 2.875rem;
+  }
+
+  .footer-content::before {
+    left: 2.5rem;
+    top: -3.75rem;
+  }
+
+  .copyright {
+    margin-top: 3rem;
+  }
+
+  .social-links {
+    position: absolute;
+    right: 2.5rem;
+    bottom: 2rem;
+  }
+
+  /* Cart */
+  .cart-container {
+    min-width: 23.5625rem;
+    left: unset;
+  }
+
+  /********** EXCEPTION **************/
+
+}
+
+@media screen and (min-width: 769px) {
+
+  /********** COMPOSITION ************/
+
+  /* Gap */
+  .d-gap-10 {
+    gap: 0.625rem;
+  }
+
+  .d-gap-16 {
+    gap: 1rem;
+  }
+
+  .d-gap-24 {
+    gap: 1.5rem;
+  }
+
+  .d-gap-30 {
+    gap: 1.875rem;
+  }
+
+  .d-gap-32 {
+    gap: 2rem;
+  }
+
+  .d-gap-48 {
+    gap: 3rem;
+  }
+
+  /* Flex */
+  .d-flex-row {
+    flex-direction: row;
+  }
+
+  .d-flex-col {
+    flex-direction: column;
+  }
+
+  .d-justify-start {
+    justify-content: flex-start;
+  }
+
+  .d-justify-center {
+    justify-content: center;
+  }
+
+  .d-justify-end {
+    justify-content: flex-end;
+  }
+
+  .d-justify-between {
+    justify-content: space-between;
+  }
+
+  .d-align-start {
+    align-items: flex-start;
+  }
+
+  .d-align-center {
+    align-items: center;
+  }
+
+  .d-align-end {
+    align-items: flex-end;
+  }
+
+  /* Padding */
+  .d-p-8 {
+    padding: 0.5rem;
+  }
+
+  .d-p-24 {
+    padding: 1.5rem;
+  }
+
+  .d-p-40 {
+    padding: 2.5rem;
+  }
+
+  .d-xp-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .d-xp-24 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Margin */
+  .d-mt-16 {
+    margin-top: 1rem;
+  }
+
+  /********** UTILITY ****************/
+
+  /* Font */
+  .d-center {
+    text-align: center;
+  }
+
+  .d-left {
+    text-align: left;
+  }
+
+  /* Font Sizes */
+  .d-56 {
+    font-size: 3.5rem;
+    line-height: 3.625rem;
+    letter-spacing: 0.125rem;
+  }
+
+  .d-40 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    letter-spacing: 0.09375rem;
+  }
+
+  .d-36 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.08125rem;
+  }
+
+  .d-32 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+    letter-spacing: 0.071875rem;
+  }
+
+  .d-28 {
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+    letter-spacing: 0.125rem;
+  }
+
+  .d-24 {
+    font-size: 1.5rem;
+    line-height: 2.0625rem;
+    letter-spacing: 0.10625rem;
+  }
+
+  .d-18 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.08125rem;
+  }
+
+  .d-15 {
+    font-size: 0.9375rem;
+    line-height: 1.28125rem;
+    letter-spacing: 0.6875rem;
+  }
+
+  /********** BLOCK ******************/
+
+
+  /* General */
+  section {
+    margin-bottom: 10.5rem;
+  }
+
+  /* Header */
+  header {
+    min-height: 6.0625rem;
+  }
+
+  header .cart,
+  header .logo {
+    margin-left: 0;
+  }
+
+  /* Navbar */
+  .nav-1 {
+    display: flex;
+  }
+
+  .nav-2,
+  .hamburger {
+    display: none;
+  }
+
+  /* Footer */
+  footer {
+    padding-top: 4.6875rem;
+    padding-bottom: 3rem;
+  }
+
+  .footer-content::before {
+    left: 2.5rem;
+    top: -4.6875rem;
+  }
+
+  .footer-links {
+    position: absolute;
+    right: 2.5rem;
+    top: -0.9375rem;
+  }
+
+  .footer-info {
+    width: 45%;
+  }
+
+  .copyright {
+    margin-top: 1.5rem;
+  }
+
+  .social-links {
+    position: absolute;
+    bottom: 0;
+  }
+
+  /********** EXCEPTION **************/
+
+}
+
+@media screen and (min-width: 1110px) {
+
+  /********** COMPOSITION ************/
+  .xd-flex-row {
+    flex-direction: row;
+  }
+
+  .xd-flex-col {
+    flex-direction: column;
+  }
+
+  .xd-gap-32 {
+    gap: 2rem;
+  }
+
+  .xd-gap-56 {
+    gap: 3.5rem;
+  }
+
+  /********** UTILITY ****************/
+  .xd-align-start {
+    align-items: flex-start;
+  }
+
+  .xd-left {
+    text-align: left;
+  }
+
+  /********** BLOCK ******************/
+
+  /* Info / Info Cards */
+  .info {
+    flex-direction: row-reverse;
+    text-align: left;
+  }
+
+  .info .card {
+    background-image: url('assets/shared/desktop/image-best-gear.jpg');
+    margin-bottom: 2rem;
+    height: 36.75rem;
+  }
+
+  .info .card-content {
+    width: 100%;
+  }
+
+  /********** EXCEPTION **************/
+}
