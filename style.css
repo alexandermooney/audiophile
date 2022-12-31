@@ -291,6 +291,12 @@ h6,
   letter-spacing: 0.0625rem;
 }
 
+.m-12 {
+  font-size: 0.75rem;
+  line-height: 1.1875rem;
+  letter-spacing: -0.015625rem;
+}
+
 .subtitle {
   font-weight: var(--fw-800);
 }
@@ -439,6 +445,12 @@ a,
 
 .svg-hover:hover {
   filter: invert(48%) sepia(84%) saturate(364%) hue-rotate(337deg) brightness(98%) contrast(88%);
+}
+
+.back-link {
+  display: inline-block;
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 a:hover,
@@ -753,11 +765,12 @@ footer {
 .qty-minus,
 .qty-plus {
   opacity: 0.25;
+  font-weight: var(--fw-800);
 }
 
 .qty-minus:hover,
 .qty-plus:hover {
-  background: rgba(0, 0, 0, 0.2);
+  color: var(--clr-primary-700);
 }
 
 .qty-num {
@@ -871,6 +884,10 @@ footer {
 
   .t-p-24 {
     padding: 1.5rem;
+  }
+
+  .t-p-32 {
+    padding: 2rem;
   }
 
   .t-p-40 {
@@ -1095,6 +1112,10 @@ footer {
     padding: 2.5rem;
   }
 
+  .d-p-48 {
+    padding: 3rem;
+  }
+
   .d-xp-0 {
     padding-left: 0;
     padding-right: 0;
@@ -1176,6 +1197,10 @@ footer {
   /* General */
   section {
     margin-bottom: 10.5rem;
+  }
+
+  .back-link {
+    padding-top: 2rem;
   }
 
   /* Header */
@@ -1261,6 +1286,11 @@ footer {
   }
 
   /********** BLOCK ******************/
+
+  .back-link {
+    padding-top: 5rem;
+    margin-bottom: 3.5rem;
+  }
 
   /* Info / Info Cards */
   .info {

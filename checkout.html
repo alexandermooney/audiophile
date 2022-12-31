@@ -7,104 +7,268 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 
-  <title>Frontend Mentor | Audiophile e-commerce website</title>
+  <title>audiophile</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="checkout.css">
 </head>
 
 <body>
-  Home
-  Headphones
-  Speakers
-  Earphones
+  <header class="[ flex-flow row m-align-center ][ clr-neutral-100 ]">
 
-  
-  <!-- Cart Modal -->
-  Cart(3)
-  Remove All
+    <div
+      class="[ container flex-flow m-flex-row m-justify-between t-justify-start d-justify-between m-align-center m-xp-24 t-xp-40 ]">
 
-  XX99 MK II x1
-  $2,999
-  
-  XX59 x2
-  $899
-  
-  YX1 x1
-  $599
-  
-  Total $5,396
+      <div class="hamburger">
+        <img class="svg-hover" src="assets/shared/tablet/icon-hamburger.svg" alt="Navigation dropdown icon">
+      </div>
 
-  Checkout
-  <!-- Cart modal end -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/shared/desktop/logo.svg" alt="audiophile logo"> </a>
+      </div>
 
-  
-  Go back
+      <nav class="[ nav-1 ]">
+        <ul class="[ flex-flow d-flex-row d-justify-center d-align-center d-gap-32 ]">
+          <li><a class="subtitle link" href="index.html">Home</a></li>
+          <li><a class="subtitle link" href="headphones.html">Headphones</a></li>
+          <li><a class="subtitle link" href="speakers.html">Speakers</a></li>
+          <li><a class="subtitle link" href="earphones.html">Earphones</a></li>
+        </ul>
+      </nav>
 
-  Checkout
+      <div class="cart">
+        <img class="svg-hover" src="assets/shared/desktop/icon-cart.svg" alt="Shopping cart icon">
+      </div>
 
-  Billing details
-  Name
-  Email address
-  Phone number
-
-  Shipping info
-  Address
-  ZIP code
-  City
-  Country
-
-  Payment details
-  Payment method
-  e-Money
-  Cash on delivery
-  e-Money number
-  e-money PIN
-
-  The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives 
-  at your residence. Just make sure your address is correct so that your order will not be cancelled.
-
-  Summary
-  XX99 MK II x1
-  $2,999
-
-  XX59 x2
-  $899
-
-  YX1 x1
-  $599
-
-  Total $5,396
-  Shipping $10
-  VAT $120
-
-  Grand total $5,526
-
-  Continue & pay
+    </div>
+  </header>
 
 
-  <!-- Success Modal -->
-  Thank you for your order
-  You will receive an email confirmation shortly.
+  <nav class="navbar nav-2 m-xp-24 t-xp-40">
 
-  XX99 MK II x 1
-  $2,999
-  and 2 other item(s)
+    <div class="[ nav-container ][ flex-flow m-flex-col t-flex-row t-gap-10 d-gap-32 container ]">
 
-  Grand total
-  $5,526
+      <div
+        class="[ card card-link headphones ][ flex-flow m-flex-col m-justify-end m-align-center m-p-8 ][ bg-neutral-400 ]">
+        <p class="[ nav-link ][ uppercase fw-800 ]">Headphones</p>
+        <a class="btn btn-arrow" href="headphones.html">Shop</a>
+      </div>
 
-  Back to home
-  <!-- End success modal -->
+      <div
+        class="[ card card-link speakers ][ flex-flow m-flex-col m-justify-end m-align-center m-p-8 ][ bg-neutral-400 ]">
+        <p class="[ nav-link ][ uppercase fw-800 ]">Speakers</p>
+        <a class="btn btn-arrow" href="speakers.html">Shop</a>
+      </div>
+
+      <div
+        class="[ card card-link earphones ][ flex-flow m-flex-col m-justify-end m-align-center m-p-8 ][ bg-neutral-400 ]">
+        <p class="[ uppercase fw-800 ]">Earphones</p>
+        <a class="btn btn-arrow" href="earphones.html">Shop</a>
+      </div>
+
+    </div>
+
+  </nav>
+  <div class="overlay"></div>
+
+  <div class="[ cart-container ][ flex-flow m-flex-col m-gap-32 m-p-32 ]">
+    <div class="[ cart-head ][ flex-flow m-flex-row m-justify-between m-align-center ]">
+      <h4 class="m-18 clr-neutral-900">Cart (<span class="cart-count">0</span>)</h4>
+      <button class="[ remove-button ]">Remove all</button>
+    </div>
+
+    <div class="[ cart-items ][ flex-flow m-flex-col m-gap-24 ]"></div>
+
+    <div class="[ cart-total ][ flex-flow m-flex-row m-justify-between m-align-center ]">
+      <span class="clr-trans-black uppercase">Total</span>
+      <span class="[ fw-800 m-18 ]">$ <span class="total-price">0</span></span>
+    </div>
+
+    <a class="btn btn-primary m-center" href="checkout.html">Checkout</a>
+  </div>
+
+  <a class="[ back-link ][ clr-trans-black fw-400 ]" href="headphones.html">Go Back</a>
+  <div class="[ checkout ][ container flex-flow m-flex-col d-flex-row m-xp-24 t-xp-40 m-gap-32 ][ bg-neutral-400 ]">
+    <div class="[ checkout-forms ][ flex-flow m-flex-col m-gap-32 t-gap-48 m-p-24 t-p-32 d-p-48 ][ bg-neutral-100 ]">
+      <h1 class="m-28 t-32">Checkout</h1>
+      <form class="[ flex-flow ][ m-gap-32 t-gap-48 m-flex-col ]" action="">
+        <div class="[ form-section ][ grid-flow m-gap-16 ]">
+          <div class="form-section-title">
+            <h3 class="m-13 clr-primary-700">Billing Details</h3>
+          </div>
+          <div class="[ form-section-inputs billing-details ][ grid-flow m-gap-24 ]">
+            <div class="[ form-input form-name ][ flex-flow m-flex-col ]">
+              <label class="m-12 fw-800" for="checkoutName">Name</label>
+              <input class="text-input" id="checkoutName" type="text" name="name" placeholder="Alexei Ward" required>
+            </div>
+            <div class="[ form-input form-email ][ flex-flow m-flex-col ]">
+              <label class="m-12 fw-800" for="checkoutEmail">Email Address</label>
+              <input class="text-input" id="checkoutEmail" type="email" name="email" placeholder="alexei@mail.com"
+                required>
+            </div>
+            <div class="[ form-input form-phone ][ flex-flow m-flex-col ]">
+              <label class="m-12 fw-800" for="checkoutPhone">Phone Number</label>
+              <input class="text-input" id="checkoutPhone" type="tel" name="email" placeholder="+1 202-555-0136"
+                required>
+            </div>
+          </div>
+        </div>
+
+        <div class="[ form-section ][ grid-flow m-gap-16 ]">
+          <div class="form-section-title">
+            <h3 class="m-13 clr-primary-700">Shipping Info</h3>
+          </div>
+          <div class="[ form-section-inputs shipping-info ][ grid-flow m-gap-24 ]">
+            <div class="[ form-input form-address ][ flex-flow m-flex-col ]">
+              <label class="m-12 fw-800" for="checkoutAddress">Your Address</label>
+              <input class="text-input" id="checkoutAddress" type="text" name="street"
+                placeholder="1137 Williams Avenue" required>
+            </div>
+            <div class="[ form-input form-zip ][ flex-flow m-flex-col ]">
+              <label class="m-12 fw-800" for="checkoutZip">ZIP Code</label>
+              <input class="text-input" id="checkoutZip" type="text" name="zip" placeholder="10001" required>
+            </div>
+            <div class="[ form-input form-city ][ flex-flow m-flex-col ]">
+              <label class="m-12 fw-800" for="checkoutCity">City</label>
+              <input class="text-input" id="checkoutCity" type="text" name="city" placeholder="New York" required>
+            </div>
+            <div class="[ form-input form-country ][ flex-flow m-flex-col ]">
+              <label class="m-12 fw-800" for="checkoutCountry">Country</label>
+              <input class="text-input" id="checkoutCountry" type="text" name="country" placeholder="United States"
+                required>
+            </div>
+          </div>
+        </div>
+        <div class="[ form-section ][ grid-flow m-gap-16 ]">
+          <div class="form-section-title">
+            <h3 class="m-13 clr-primary-700">Payment Details</h3>
+          </div>
+          <div class="[ payment-container ][ grid-flow m-gap-16 ]">
+            <h4 class="m-12 fw-800">Payment Method</h4>
+            <div class="[ form-section-inputs shipping-info ][ flex-flow m-gap-24 m-flex-col ]">
+              <div class="radio">
+                <input id="eMoney" type="radio" name="paymentMethod" value="emoney">
+                <label class="m-12 fw-800" for="eMoney">e-Money</label>
+              </div>
+              <div class="radio">
+                <input id="cashOnDelivery" type="radio" name="paymentMethod" value="cashondelivery">
+                <label class="m-12 fw-800" for="cashOnDelivery">Cash on Delivery</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="[ payment-info ][ grid-flow m-gap-32 ]">
+          <div class="[ form-section-inputs form-emoney-info ][ grid-flow m-gap-24 ]">
+            <div class="[ form-input ][ flex-flow m-flex-col ]">
+              <label class="m-12 fw-800" for="emoneyNumber">e-Money Number</label>
+              <input class="text-input" id="emoneyNumber" type="text" name="emoneyNumber" placeholder="238521993">
+            </div>
+            <div class="[ form-input ][ flex-flow m-flex-col ]">
+              <label class="m-12 fw-800" for="emoneyPin">e-Money Pin</label>
+              <input class="text-input" id="emoneyPin" type="text" name="emoneyPin" placeholder="6891">
+            </div>
+          </div>
+
+          <div class="[ cod-info ][ grid-flow m-gap-32 m-center t-left ]">
+            <div class="[ cod-info-img ][ grid-flow ]">
+              <img src="assets/checkout/icon-cash-on-delivery.svg" alt="">
+            </div>
+            <p>The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your
+              residence. Just make sure your address is correct so that your order will not be cancelled.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="[ checkout-summary ][ flex-flow m-flex-col m-gap-32 t-gap-48 m-p-24 t-p-32 d-p-48 ][ bg-neutral-100 ]">
+      <h2 class="m-18">Summary</h2>
+      <div class="[ summary-cart ][ flex-flow m-flex-col m-gap-24 ]">
+
+      </div>
+      <div class="[ summary-totals ][ flex-flow m-flex-col m-gap-8 ]">
+        <div class="[ summary-total ][ flex-flow m-justify-between ]">
+          <span class="fw-400 clr-trans-black">Total</span>
+          <span class="fs-18 fw-800" id="summaryTotal">$0</span>
+        </div>
+        <div class="[ summary-shipping ][ flex-flow m-justify-between ]">
+          <span class="fw-400 clr-trans-black">Shipping</span>
+          <span class="fs-18 fw-800">$50</span>
+        </div>
+        <div class="[ summary-vat ][ flex-flow m-justify-between ]">
+          <span class="fw-400 clr-trans-black">VAT (included)</span>
+          <span class="fs-18 fw-800" id="summaryVAT">$0</span>
+        </div>
+        <div class="[ summary-grand ][ flex-flow m-justify-between ]">
+          <span class="fw-400 clr-trans-black">Grand Total</span>
+          <span class="fs-18 fw-800 clr-primary-700" id="summaryGrand">$0</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary">Continue & Pay</button>
+    </div>
+  </div>
 
 
-  Home
-  Headphones
-  Speakers
-  Earphones
+  <footer class="[ bg-neutral-900 ]">
 
-  Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers
-  and sound specialists who are devoted to helping you get the most out of personal audio. Come and
-  visit our demo facility - we’re open 7 days a week.
+    <div
+      class="[ footer-content ][ container flex-flow m-flex-col m-justify-center m-align-center t-align-start m-gap-48 t-gap-32 m-xp-24 t-xp-40 m-center t-left ]">
 
-  Copyright 2021. All Rights Reserved
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/shared/desktop/logo.svg" alt="audiophile logo">
+        </a>
+      </div>
+
+      <ul class="[ footer-links ][ flex-flow m-flex-col t-flex-row m-gap-16 t-gap-32 ]">
+        <li>
+          <a class="[ link ][ uppercase ]" href="index.html">Home</a>
+        </li>
+        <li>
+          <a class="[ link ][ uppercase ]" href="headphones.html">Headphones</a>
+        </li>
+        <li>
+          <a class="[ link ][ uppercase ]" href="speakers.html">Speakers</a>
+        </li>
+        <li>
+          <a class="[ link ][ uppercase ]" href="earphones.html">Earphones</a>
+        </li>
+      </ul>
+
+      <p class="[ footer-info ][ clr-trans-white ]">Audiophile is an all in one stop to fulfill your audio needs. We're
+        a
+        small team of
+        music lovers and sound
+        specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility
+        - we're open 7 days a week.</p>
+
+      <p class="[ copyright ][ clr-trans-white fw-800 ]">Copyright 2022. All Rights Reserved</p>
+
+      <ul class="[ social-links ][ flex-flow m-flex-row m-gap-16 ]">
+        <li>
+          <a href="https://facebook.com">
+            <img class="svg-hover" src="assets/shared/desktop/icon-facebook.svg" alt="Facebook logo">
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com">
+            <img class="svg-hover" src="assets/shared/desktop/icon-twitter.svg" alt="Twitter logo">
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com">
+            <img class="svg-hover" src="assets/shared/desktop/icon-instagram.svg" alt="Instagram logo">
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="product-page.js"></script>
+  <script src="checkout.js"></script>
 </body>
 
 </html>

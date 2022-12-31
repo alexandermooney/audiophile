@@ -1,0 +1,185 @@
+.checkout {
+  padding-top: 5.625rem;
+}
+
+.checkout-forms,
+.checkout-summary {
+  border-radius: 0.5rem;
+}
+
+label {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+label,
+.text-input {
+  font-weight: 700;
+  letter-spacing: -0.015625rem;
+}
+
+.radio label,
+.text-input {
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+}
+
+.text-input,
+.radio {
+  width: 100%;
+  height: 3.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #CFCFCF;
+  margin-top: 0.5rem;
+}
+
+.text-input:focus,
+.radio:has(input[type="radio"]:checked),
+.radio:hover {
+  border-color: var(--clr-primary-700);
+  outline: none;
+}
+
+/* .text-input:invalid {
+  border-color: red;
+  outline: none;
+} */
+
+.radio:hover {
+  cursor: pointer;
+}
+
+.text-input::placeholder {
+  color: #000;
+  opacity: 0.4;
+}
+
+.radio {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 0;
+}
+
+input[type="radio"] {
+  width: fit-content;
+}
+
+.radio label {
+  margin-left: 0.75rem;
+}
+
+.cod-info-img {
+  justify-content: center;
+  align-items: center;
+}
+
+.form-emoney-info,
+.cod-info {
+  display: none;
+}
+
+.summary-cart .qty {
+  background-color: transparent;
+  opacity: 0.5;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+}
+
+.summary-total *:first-child,
+.summary-shipping *:first-child,
+.summary-vat *:first-child,
+.summary-grand *:first-child {
+  letter-spacing: unset;
+  text-transform: uppercase;
+}
+
+.summary-grand {
+  margin-top: 1rem;
+}
+
+.checkout {
+  padding-bottom: 6.0625rem;
+}
+
+@media screen and (min-width: 481px) {
+  input {
+    width: 19.3125rem;
+  }
+
+  .form-name {
+    grid-area: name;
+  }
+
+  .form-email {
+    grid-area: email;
+  }
+
+  .form-phone {
+    grid-area: phone;
+  }
+
+  .billing-details {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "name email"
+      "phone .";
+  }
+
+  .form-address {
+    grid-area: address;
+  }
+
+  .form-zip {
+    grid-area: zip;
+  }
+
+  .form-city {
+    grid-area: city;
+  }
+
+  .form-country {
+    grid-area: country;
+  }
+
+  .shipping-info {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "address address"
+      "zip city"
+      "country .";
+  }
+
+  .payment-container,
+  .form-emoney-info {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cod-info {
+    grid-template-columns: auto 1fr;
+  }
+
+  .checkout {
+    padding-bottom: 7.25rem;
+  }
+}
+
+@media screen and (min-width: 769px) {}
+
+@media screen and (min-width: 1110px) {
+  .checkout {
+    display: grid;
+    grid-template-columns: 1fr 21.875rem;
+    ;
+    padding-top: 6rem;
+    padding-bottom: 8.8125rem;
+  }
+
+  .checkout-summary {
+    height: fit-content;
+  }
+}
